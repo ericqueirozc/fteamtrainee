@@ -17,23 +17,29 @@ class HomeView extends StatelessWidget {
               height: MediaQuery.of(context).size.height * .87,
               child: ListView(
                 children: [
-                  ListTile(
-                    title: Text("IMC"),
-                    onTap: () {
-                      Navigator.pushNamed(context, '/imc');
-                    },
+                  Card(
+                    child: ListTile(
+                      title: Text("IMC"),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/imc');
+                      },
+                    ),
                   ),
-                  ListTile(
-                    title: Text("Conversor de Moeda"),
-                    onTap: () {
-                      Navigator.pushNamed(context, '/conversor');
-                    },
+                  Card(
+                    child: ListTile(
+                      title: Text("Conversor de Moeda"),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/conversor');
+                      },
+                    ),
                   ),
-                  ListTile(
-                    title: Text("Validador de CPF"),
-                    onTap: () {
-                      Navigator.pushNamed(context, '/cpf');
-                    },
+                  Card(
+                    child: ListTile(
+                      title: Text("Validador de CPF"),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/cpf');
+                      },
+                    ),
                   )
                 ],
               ),

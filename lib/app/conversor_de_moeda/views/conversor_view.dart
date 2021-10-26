@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:varios_apps/app/conversor_de_moeda/controllers/conversor_controller.dart';
+import 'package:varios_apps/app/conversor_de_moeda/controllers/conversor_%20controller.dart';
 
 class ConversorView extends StatefulWidget {
   const ConversorView({Key? key}) : super(key: key);
@@ -26,8 +26,8 @@ class _ConversorViewState extends State<ConversorView> {
                 controller: controller.realController,
                 onChanged: (value) {
                   value == ""
-                      ? 0
-                      : controller.dolarAndEuroFromReal(double.parse(value));
+                      ? controller.clearFields()
+                      : controller.realToDollarAndEuro(double.parse(value));
                 },
                 decoration: InputDecoration(
                     labelText: "Real", border: OutlineInputBorder()),
@@ -36,8 +36,8 @@ class _ConversorViewState extends State<ConversorView> {
               TextFormField(
                 onChanged: (value) {
                   value == ""
-                      ? 0
-                      : controller.realAndEuroFromDollar(double.parse(value));
+                      ? controller.clearFields()
+                      : controller.dollarToRealAndEuro(double.parse(value));
                 },
                 controller: controller.dollarController,
                 decoration: InputDecoration(
@@ -47,8 +47,8 @@ class _ConversorViewState extends State<ConversorView> {
               TextFormField(
                 onChanged: (value) {
                   value == ""
-                      ? 0
-                      : controller.euroAndDolFromEuro(double.parse(value));
+                      ? controller.clearFields()
+                      : controller.euroToRealAndDollar(double.parse(value));
                 },
                 controller: controller.euroController,
                 decoration: InputDecoration(

@@ -1,20 +1,4 @@
 class CPF {
-//  List<int> _digits = [];
-
-  //getters
-//  List<int> get numbers => numbers;
-//  List<int> get digits => _digits;
-
-  //Setters
-//  set numbers(List<int> numbers) => _numbers = numbers;
-//  set digits(List<int> digits) => _digits = digits;
-
-  //Methods
-
-//  List<int> fullCpf(List<int> numbers, List<int> digits) {
-//    return numbers + digits;
-//  }
-
   List<int> fromStringToListOfInt(String cpf) {
     List<String> cpfString = cpf.split("");
     List<int> cpfInt = [];
@@ -38,7 +22,7 @@ class CPF {
   int getDigit(int sum) {
     int digit = sum % 11;
     print(digit);
-    return digit != 0 ? digit : 0;
+    return digit != 10 ? digit : 0;
   }
 
   int multiplyEachByElevenDecAndSum(List<int> sequence) {

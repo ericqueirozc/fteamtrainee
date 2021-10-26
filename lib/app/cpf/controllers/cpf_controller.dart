@@ -5,14 +5,14 @@ class CpfController extends ChangeNotifier {
   CpfController._();
   static CpfController instance = CpfController._();
 
-  //Variables
+  //Properties
   TextEditingController cpfController = TextEditingController();
   var cpfModel = CPF();
   bool isTextActive = false;
   bool isWarningActive = false;
   bool isValid = false;
-  //Methods
 
+  //Methods
   validate() {
     if (cpfController.text.length == 11) {
       try {
@@ -29,6 +29,7 @@ class CpfController extends ChangeNotifier {
             : this.isValid = false;
         notifyListeners();
       } catch (e) {
+        isTextActive = false;
         this.isWarningActive = true;
         notifyListeners();
       }
