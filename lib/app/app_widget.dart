@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:varios_apps/app/cpf/views/cpf_view.dart';
 
-import 'conversor_de_moeda/views/conversor_home_view.dart';
+import 'conversor_de_moeda/views/conversor_view.dart';
 import 'home/views/home_view.dart';
 import 'imc/views/imc_home_view.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomeView(),
         '/imc': (context) => const ImcHomeView(),
-        '/conversor': (context) => const ConversorHomeView(),
+        '/conversor': (context) => const ConversorView(),
         '/cpf': (context) => const CpfView()
       },
     );

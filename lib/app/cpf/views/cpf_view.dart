@@ -34,16 +34,37 @@ class _CpfViewState extends State<CpfView> {
                   height: 10,
                 ),
                 SizedBox(
-                    height: 55,
-                    width: double.infinity,
-                    child: ElevatedButton(
-                        onPressed: () {
-                          controller.
-                        },
-                        child: Text(
-                          "Validar",
-                          style: TextStyle(fontSize: 18),
-                        ))),
+                  height: 55,
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      controller.validate();
+                    },
+                    child: Text(
+                      "Validar",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                (controller.isTextActive
+                    ? Text(
+                        controller.isValid ? "CPF Valido" : "CPF Invalido",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
+                      )
+                    : SizedBox()),
+                (controller.isWarningActive
+                    ? Text(
+                        "Digite corretamente o CPF",
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.redAccent),
+                      )
+                    : SizedBox())
               ],
             ),
           ));

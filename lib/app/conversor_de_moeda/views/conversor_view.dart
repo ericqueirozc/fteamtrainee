@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:varios_apps/app/conversor_de_moeda/controllers/conversor_controller.dart';
 
-class ConversorHomeView extends StatefulWidget {
-  const ConversorHomeView({Key? key}) : super(key: key);
+class ConversorView extends StatefulWidget {
+  const ConversorView({Key? key}) : super(key: key);
 
   @override
-  _ConversorHomeViewState createState() => _ConversorHomeViewState();
+  _ConversorViewState createState() => _ConversorViewState();
 }
 
-class _ConversorHomeViewState extends State<ConversorHomeView> {
+class _ConversorViewState extends State<ConversorView> {
   final ConversorController controller = ConversorController.instance;
 
   @override
