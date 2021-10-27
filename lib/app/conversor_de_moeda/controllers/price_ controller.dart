@@ -9,7 +9,7 @@ class ConversorController {
   TextEditingController dollarController = TextEditingController();
   TextEditingController euroController = TextEditingController();
   TextEditingController realController = TextEditingController();
-  ConversorModel conversorModel = ConversorModel();
+  PriceModel conversorModel = PriceModel();
 
   //Methods
   clearFields() {
@@ -20,30 +20,28 @@ class ConversorController {
 
   realToDollarAndEuro(input) {
     dollarController.text = conversorModel
-        .converter(input, conversorModel.real, conversorModel.dollar)
+        .converter(input, conversorModel.priceDollar, conversorModel.priceReal)
         .toStringAsFixed(2);
     euroController.text = conversorModel
-        .converter(double.parse(dollarController.text), conversorModel.euro,
-            conversorModel.dollar)
+        .converter(input, conversorModel.priceEuro, conversorModel.priceReal)
         .toStringAsFixed(2);
   }
 
   dollarToRealAndEuro(input) {
     realController.text = conversorModel
-        .converter(input, conversorModel.real, conversorModel.dollar)
+        .converter(input, conversorModel.priceReal, conversorModel.priceDollar)
         .toStringAsFixed(2);
     euroController.text = conversorModel
-        .converter(double.parse(dollarController.text), conversorModel.euro,
-            conversorModel.dollar)
+        .converter(input, conversorModel.priceEuro, conversorModel.priceDollar)
         .toStringAsFixed(2);
   }
 
   euroToRealAndDollar(input) {
     realController.text = conversorModel
-        .converter(input, conversorModel.real, conversorModel.euro)
+        .converter(input, conversorModel.priceReal, conversorModel.priceEuro)
         .toStringAsFixed(2);
     dollarController.text = conversorModel
-        .converter(input, conversorModel.dollar, conversorModel.euro)
+        .converter(input, conversorModel.priceDollar, conversorModel.priceEuro)
         .toStringAsFixed(2);
   }
 }

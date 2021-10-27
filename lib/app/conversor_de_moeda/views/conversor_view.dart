@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:varios_apps/app/conversor_de_moeda/controllers/conversor_%20controller.dart';
+import 'package:varios_apps/app/conversor_de_moeda/controllers/price_%20controller.dart';
 
 class ConversorView extends StatefulWidget {
   const ConversorView({Key? key}) : super(key: key);

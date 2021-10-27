@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:varios_apps/app/imc/controllers/imc_home_controller.dart';
+import 'package:varios_apps/app/imc/controllers/imc_controller.dart';
 
 class ImcHomeView extends StatefulWidget {
   const ImcHomeView({Key? key}) : super(key: key);
@@ -9,7 +9,7 @@ class ImcHomeView extends StatefulWidget {
 }
 
 class _ImcHomeViewState extends State<ImcHomeView> {
-  final ImcHomeController controller = ImcHomeController.instance;
+  final ImcController controller = ImcController();
 
   @override
   Widget build(BuildContext context) {
@@ -17,68 +17,66 @@ class _ImcHomeViewState extends State<ImcHomeView> {
       appBar: AppBar(
         title: Text("Calculadora de IMC"),
       ),
-      body: AnimatedBuilder(
-        animation: controller,
-        builder: (context, widget) => Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Form(
-            child: Column(
-              children: [
-                TextFormField(
-                  controller: controller.pesoController,
-                  decoration: InputDecoration(
-                      labelText: "Peso", border: OutlineInputBorder()),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                TextFormField(
-                  controller: controller.alturaController,
-                  decoration: InputDecoration(
-                      labelText: "Altura", border: OutlineInputBorder()),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  width: double.infinity,
-                  height: 55,
-                  child: ElevatedButton(
-                      onPressed: () {
-                        controller.calcularImc();
-                      },
-                      child: Text(
-                        "Calcular",
-                        style: TextStyle(fontSize: 18),
-                      )),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Seu IMC é",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black45),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                    controller.result.toStringAsFixed(2) == "0.0"
-                        ? "Preencha os campos"
-                        : controller.result.toStringAsFixed(2),
-                    style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black87))
-              ],
-            ),
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Form(
+          child: Column(
+            children: [
+              TextField(
+                onChanged: (value) {
+                  controller.peso = double.tryParse(value) ?? 0;
+                },
+                decoration: InputDecoration(
+                    labelText: "Peso", border: OutlineInputBorder()),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              TextField(
+                onChanged: (value) {
+                  controller.altura = double.tryParse(value) ?? 0;
+                },
+                decoration: InputDecoration(
+                    labelText: "Altura", border: OutlineInputBorder()),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                width: double.infinity,
+                height: 55,
+                child: ElevatedButton(
+                    onPressed: () {
+                      controller.calculateImc();
+                    },
+                    child: Text(
+                      "Calcular",
+                      style: TextStyle(fontSize: 18),
+                    )),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Seu IMC é",
+                style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black45),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              AnimatedBuilder(
+                animation: controller,
+                builder: (context, widget) {
+                  return Text(controller.result);
+                },
+              )
+            ],
           ),
         ),
       ),
     );
-    ;
   }
 }
