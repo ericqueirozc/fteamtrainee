@@ -1,5 +1,9 @@
 class CPF {
-  List<int> fromStringToListOfInt(String cpf) {
+  String cpf;
+
+  CPF(String this.cpf);
+
+  List<int> fromStringToListOfInt() {
     List<String> cpfString = cpf.split("");
     List<int> cpfInt = [];
     cpfString.forEach((element) {
@@ -34,5 +38,18 @@ class CPF {
       aux -= 1;
     }
     return sum * 10;
+  }
+
+  bool isValid(String value) {
+    if (value.length != 11) {
+      return false;
+    } else {
+      try {
+        int.parse(value);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
   }
 }

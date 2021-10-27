@@ -7,7 +7,6 @@ class CpfController extends ChangeNotifier {
 
   //Properties
   TextEditingController cpfController = TextEditingController();
-  var cpfModel = CPF();
   bool isTextActive = false;
   bool isWarningActive = false;
   bool isValid = false;
@@ -17,8 +16,9 @@ class CpfController extends ChangeNotifier {
     if (cpfController.text.length == 11) {
       try {
         int.parse(cpfController.text);
+        CPF cpfModel = CPF(cpfController.text);
         this.isWarningActive = false;
-        List<int> cpfInt = cpfModel.fromStringToListOfInt(cpfController.text);
+        List<int> cpfInt = cpfModel.fromStringToListOfInt();
         int sum = cpfModel.multiplyEachByTenDecAndSum(cpfInt);
         int dig = cpfModel.getDigit(sum);
         int sum2 = cpfModel.multiplyEachByElevenDecAndSum(cpfInt);
