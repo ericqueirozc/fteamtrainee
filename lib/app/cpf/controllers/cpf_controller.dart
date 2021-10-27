@@ -13,29 +13,15 @@ class CpfController extends ChangeNotifier {
 
   //Methods
   validate() {
-    if (cpfController.text.length == 11) {
-      try {
-        int.parse(cpfController.text);
-        CPF cpfModel = CPF(cpfController.text);
-        this.isWarningActive = false;
-        List<int> cpfInt = cpfModel.fromStringToListOfInt();
-        int sum = cpfModel.multiplyEachByTenDecAndSum(cpfInt);
-        int dig = cpfModel.getDigit(sum);
-        int sum2 = cpfModel.multiplyEachByElevenDecAndSum(cpfInt);
-        int dig2 = cpfModel.getDigit(sum2);
-        isTextActive = true;
-        (dig == cpfInt[9] && dig2 == cpfInt[10])
-            ? this.isValid = true
-            : this.isValid = false;
-        notifyListeners();
-      } catch (e) {
-        isTextActive = false;
-        this.isWarningActive = true;
-        notifyListeners();
-      }
+    CPF cpf = CPF(cpfController.text);
+    if (cpf.inputIsValid()) {
+      isWarningActive = false;
+      isTextActive = true;
+      isValid = cpf.validateCpf();
+      notifyListeners();
     } else {
       isTextActive = false;
-      this.isWarningActive = true;
+      isWarningActive = true;
       notifyListeners();
     }
   }
