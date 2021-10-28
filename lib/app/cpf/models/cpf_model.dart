@@ -1,28 +1,32 @@
 class CPF {
-  String cpf;
+  final String cpf;
 
   CPF(String this.cpf);
 
-  List<int> cpfInt = [];
+  List<int> _cpfInt = [];
 
   bool validateCpf() {
-    cpfInt = fromStringToListOfInt();
-    int sum1 = multiplyEachByTenDecAndSum(cpfInt);
-    int digit1 = getDigit(sum1);
-    int sum2 = multiplyEachByElevenDecAndSum(cpfInt);
-    int digit2 = getDigit(sum2);
-    return (digit1 == cpfInt[9] && digit2 == cpfInt[10]) ? true : false;
+    if (inputIsValid()) {
+      _cpfInt = _fromStringToListOfInt();
+      int sum1 = _multiplyEachByTenDecAndSum(_cpfInt);
+      int digit1 = _getDigit(sum1);
+      int sum2 = _multiplyEachByElevenDecAndSum(_cpfInt);
+      int digit2 = _getDigit(sum2);
+      return (digit1 == _cpfInt[9] && digit2 == _cpfInt[10]) ? true : false;
+    } else {
+      return false;
+    }
   }
 
-  List<int> fromStringToListOfInt() {
+  List<int> _fromStringToListOfInt() {
     List<String> cpfString = cpf.split("");
     cpfString.forEach((element) {
-      cpfInt.add(int.parse(element));
+      _cpfInt.add(int.parse(element));
     });
-    return cpfInt;
+    return _cpfInt;
   }
 
-  int multiplyEachByTenDecAndSum(List<int> sequence) {
+  int _multiplyEachByTenDecAndSum(List<int> sequence) {
     int aux = 10;
     int sum = 0;
     for (var i = 0; i < 9; i++) {
@@ -32,12 +36,12 @@ class CPF {
     return sum * 10;
   }
 
-  int getDigit(int sum) {
+  int _getDigit(int sum) {
     int digit = sum % 11;
     return digit != 10 ? digit : 0;
   }
 
-  int multiplyEachByElevenDecAndSum(List<int> sequence) {
+  int _multiplyEachByElevenDecAndSum(List<int> sequence) {
     int aux = 11;
     int sum = 0;
     for (var i = 0; i < 10; i++) {

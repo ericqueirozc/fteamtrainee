@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:varios_apps/app/cpf/controllers/cpf_controller.dart';
 
 class CpfView extends StatefulWidget {
@@ -26,6 +27,12 @@ class _CpfViewState extends State<CpfView> {
             child: Column(
               children: [
                 TextFormField(
+                  keyboardType: TextInputType.number,
+                  inputFormatters: [
+                    LengthLimitingTextInputFormatter(11),
+                    FilteringTextInputFormatter.digitsOnly,
+                    CpfTextFormatter()
+                  ],
                   controller: controller.cpfController,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), labelText: "CPF"),
@@ -71,5 +78,23 @@ class _CpfViewState extends State<CpfView> {
         },
       ),
     );
+  }
+}
+
+class CpfTextFormatter extends TextInputFormatter {
+  @override
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue, TextEditingValue newValue) {
+    if (newValue.text.length == 4 ||
+        newValue.text.length == 7 ||
+        newValue.text.length == 10) {
+      return TextEditingValue(
+          text: "${oldValue.text}.${newValue.text[newValue.text.length - 1]}",
+          selection: TextSelection.collapsed(offset: newValue.text.length));
+    } else {
+      return TextEditingValue(
+          text: newValue.text,
+          selection: TextSelection.collapsed(offset: newValue.text.length));
+    }
   }
 }

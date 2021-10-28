@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:varios_apps/app/conversor_de_moeda/models/conversor_model.dart';
+import 'package:varios_apps/app/conversor_de_moeda/models/price_model.dart';
 
-class ConversorController {
-  ConversorController._();
-  static ConversorController instance = ConversorController._();
+class PriceController {
+  PriceController._();
+  static PriceController instance = PriceController._();
 
   //Properties
   TextEditingController dollarController = TextEditingController();
   TextEditingController euroController = TextEditingController();
   TextEditingController realController = TextEditingController();
-  PriceModel conversorModel = PriceModel();
+  PriceModel priceModel = PriceModel();
 
   //Methods
   clearFields() {
@@ -19,29 +19,29 @@ class ConversorController {
   }
 
   realToDollarAndEuro(input) {
-    dollarController.text = conversorModel
-        .converter(input, conversorModel.priceDollar, conversorModel.priceReal)
+    dollarController.text = priceModel
+        .converter(input, priceModel.priceDollar, priceModel.priceReal)
         .toStringAsFixed(2);
-    euroController.text = conversorModel
-        .converter(input, conversorModel.priceEuro, conversorModel.priceReal)
+    euroController.text = priceModel
+        .converter(input, priceModel.priceEuro, priceModel.priceReal)
         .toStringAsFixed(2);
   }
 
   dollarToRealAndEuro(input) {
-    realController.text = conversorModel
-        .converter(input, conversorModel.priceReal, conversorModel.priceDollar)
+    realController.text = priceModel
+        .converter(input, priceModel.priceReal, priceModel.priceDollar)
         .toStringAsFixed(2);
-    euroController.text = conversorModel
-        .converter(input, conversorModel.priceEuro, conversorModel.priceDollar)
+    euroController.text = priceModel
+        .converter(input, priceModel.priceEuro, priceModel.priceDollar)
         .toStringAsFixed(2);
   }
 
   euroToRealAndDollar(input) {
-    realController.text = conversorModel
-        .converter(input, conversorModel.priceReal, conversorModel.priceEuro)
+    realController.text = priceModel
+        .converter(input, priceModel.priceReal, priceModel.priceEuro)
         .toStringAsFixed(2);
-    dollarController.text = conversorModel
-        .converter(input, conversorModel.priceDollar, conversorModel.priceEuro)
+    dollarController.text = priceModel
+        .converter(input, priceModel.priceDollar, priceModel.priceEuro)
         .toStringAsFixed(2);
   }
 }

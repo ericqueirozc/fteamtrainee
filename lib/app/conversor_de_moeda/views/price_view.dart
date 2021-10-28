@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:varios_apps/app/conversor_de_moeda/controllers/price_%20controller.dart';
 
-class ConversorView extends StatefulWidget {
-  const ConversorView({Key? key}) : super(key: key);
+class PriceView extends StatefulWidget {
+  const PriceView({Key? key}) : super(key: key);
 
   @override
-  _ConversorViewState createState() => _ConversorViewState();
+  _PriceViewState createState() => _PriceViewState();
 }
 
-class _ConversorViewState extends State<ConversorView> {
-  final ConversorController controller = ConversorController.instance;
+class _PriceViewState extends State<PriceView> {
+  final PriceController controller = PriceController.instance;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Conversor de Moedas"),
+        title: Text("Price de Moedas"),
       ),
       body: Padding(
         padding: EdgeInsets.all(12),
