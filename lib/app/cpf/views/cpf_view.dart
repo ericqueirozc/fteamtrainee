@@ -29,7 +29,7 @@ class _CpfViewState extends State<CpfView> {
                 TextFormField(
                   keyboardType: TextInputType.number,
                   inputFormatters: [
-                    LengthLimitingTextInputFormatter(11),
+                    LengthLimitingTextInputFormatter(14),
                     FilteringTextInputFormatter.digitsOnly,
                     CpfTextFormatter()
                   ],
@@ -82,19 +82,42 @@ class _CpfViewState extends State<CpfView> {
 }
 
 class CpfTextFormatter extends TextInputFormatter {
+  StringBuffer buffer = StringBuffer();
   @override
   TextEditingValue formatEditUpdate(
       TextEditingValue oldValue, TextEditingValue newValue) {
-    if (newValue.text.length == 4 ||
-        newValue.text.length == 7 ||
-        newValue.text.length == 10) {
+    String cleanInput = newValue.text.replaceFirst(RegExp('.'), '');
+    print(cleanInput);
+    int cleanInputSize = cleanInput.length;
+    print(cleanInputSize);
+    if (cleanInputSize > 2 && cleanInputSize < 6) {
       return TextEditingValue(
-          text: "${oldValue.text}.${newValue.text[newValue.text.length - 1]}",
-          selection: TextSelection.collapsed(offset: newValue.text.length));
-    } else {
-      return TextEditingValue(
-          text: newValue.text,
-          selection: TextSelection.collapsed(offset: newValue.text.length));
+          text: newValue.text.substring(0, 3) +
+              "." +
+              newValue.text.substring(3, newValue.text.length),
+          selection: TextSelection.collapsed(offset: newValue.text.length + 1));
     }
+    if (cleanInputSize > 5 && cleanInputSize < 9) {
+      return TextEditingValue(
+          text: newValue.text.substring(0, 3) +
+              "." +
+              newValue.text.substring(3, 6) +
+              "." +
+              (newValue.text.substring(6, newValue.text.length)),
+          selection: TextSelection.collapsed(offset: newValue.text.length + 2));
+    }
+    if (cleanInputSize > 8 && cleanInputSize < 11) {
+      return TextEditingValue(
+          text: newValue.text.substring(0, 3) +
+              "." +
+              newValue.text.substring(3, 6) +
+              "." +
+              newValue.text.substring(6, 9) +
+              "-" +
+              newValue.text.substring(9, newValue.text.length),
+          selection: TextSelection.collapsed(offset: newValue.text.length + 3));
+    }
+
+    return newValue;
   }
 }

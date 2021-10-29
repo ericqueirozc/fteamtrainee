@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:varios_apps/app/cpf/views/cpf_view.dart';
+import 'package:varios_apps/app/movies/views/movies_view.dart';
 
 import 'conversor_de_moeda/views/price_view.dart';
 import 'home/views/home_view.dart';
@@ -19,8 +20,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomeView(),
         '/imc': (context) => const ImcHomeView(),
-        '/conversor': (context) => const PriceView(),
-        '/cpf': (context) => const CpfView()
+        '/price': (context) => const PriceView(),
+        '/cpf': (context) => const CpfView(),
+        '/movies': (context) => const MoviesView()
       },
     );
   }

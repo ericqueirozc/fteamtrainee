@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 class CPF {
   final String cpf;
 
@@ -8,7 +10,7 @@ class CPF {
   bool validateCpf() {
     if (inputIsValid()) {
       _cpfInt = _fromStringToListOfInt();
-      int sum1 = _multiplyEachByTenDecAndSum(_cpfInt);
+      int sum1 = multiplyEachByTenDecAndSum(_cpfInt);
       int digit1 = _getDigit(sum1);
       int sum2 = _multiplyEachByElevenDecAndSum(_cpfInt);
       int digit2 = _getDigit(sum2);
@@ -19,14 +21,17 @@ class CPF {
   }
 
   List<int> _fromStringToListOfInt() {
-    List<String> cpfString = cpf.split("");
+    String cleanCpfOne = cpf.replaceFirst('.', "");
+    String cleanCpfTwo = cleanCpfOne.replaceFirst('.', "");
+    List<String> cpfString = cleanCpfTwo.split("");
     cpfString.forEach((element) {
       _cpfInt.add(int.parse(element));
     });
     return _cpfInt;
   }
 
-  int _multiplyEachByTenDecAndSum(List<int> sequence) {
+  @visibleForTesting
+  int multiplyEachByTenDecAndSum(List<int> sequence) {
     int aux = 10;
     int sum = 0;
     for (var i = 0; i < 9; i++) {

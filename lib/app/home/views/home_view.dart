@@ -29,7 +29,7 @@ class HomeView extends StatelessWidget {
                     child: ListTile(
                       title: Text("Conversor de Moeda"),
                       onTap: () {
-                        Navigator.pushNamed(context, '/conversor');
+                        Navigator.pushNamed(context, '/price');
                       },
                     ),
                   ),
@@ -38,6 +38,14 @@ class HomeView extends StatelessWidget {
                       title: Text("Validador de CPF"),
                       onTap: () {
                         Navigator.pushNamed(context, '/cpf');
+                      },
+                    ),
+                  ),
+                  Card(
+                    child: ListTile(
+                      title: Text("Filmes"),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/movies');
                       },
                     ),
                   )
