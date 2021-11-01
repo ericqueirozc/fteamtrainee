@@ -70,7 +70,9 @@ class _ImcHomeViewState extends State<ImcHomeView> {
               AnimatedBuilder(
                 animation: controller,
                 builder: (context, widget) {
-                  return Text(controller.result);
+                  return Text(controller.result != 0.0
+                      ? controller.result
+                      : "Informações invalidas.");
                 },
               )
             ],

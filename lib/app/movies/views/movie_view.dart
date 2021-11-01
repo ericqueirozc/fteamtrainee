@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:varios_apps/app/movies/controllers/movies_controller.dart';
+import 'package:varios_apps/app/movies/controllers/movie_controller.dart';
 
 class MoviesView extends StatefulWidget {
   const MoviesView({Key? key}) : super(key: key);
@@ -28,9 +28,8 @@ class _MoviesViewState extends State<MoviesView> {
                 itemBuilder: (context, index) {
                   return Card(
                     child: ListTile(
-                      title: Text(controller.movies[index]["name"]),
-                      subtitle:
-                          Text(controller.movies[index]["age"].toString()),
+                      title: Text(controller.movies[index].name),
+                      subtitle: Text(controller.movies[index].age.toString()),
                     ),
                   );
                 }),

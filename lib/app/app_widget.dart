@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:varios_apps/app/cpf/views/cpf_view.dart';
-import 'package:varios_apps/app/movies/views/movies_view.dart';
+import 'package:varios_apps/app/movies/views/movie_view.dart';
 
 import 'conversor_de_moeda/views/price_view.dart';
 import 'home/views/home_view.dart';

@@ -33,12 +33,4 @@ void main() {
     CPF cpfModel = CPF("");
     expect(false, cpfModel.validateCpf());
   });
-
-/*
-  test("fromStringToListOfInt() deve retornar uma lista de ints", () {
-    CPF cpfModel = CPF("12312312332");
-    expect([1, 2, 3, 1, 2, 3, 1, 2, 3, 3, 2], cpfModel._fromStringToListOfInt());
-  });
-
-  */
 }

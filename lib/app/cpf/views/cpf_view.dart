@@ -87,9 +87,7 @@ class CpfTextFormatter extends TextInputFormatter {
   TextEditingValue formatEditUpdate(
       TextEditingValue oldValue, TextEditingValue newValue) {
     String cleanInput = newValue.text.replaceFirst(RegExp('.'), '');
-    print(cleanInput);
     int cleanInputSize = cleanInput.length;
-    print(cleanInputSize);
     if (cleanInputSize > 2 && cleanInputSize < 6) {
       return TextEditingValue(
           text: newValue.text.substring(0, 3) +

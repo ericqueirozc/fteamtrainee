@@ -29,7 +29,7 @@ class PriceController {
 
   dollarToRealAndEuro(input) {
     realController.text = priceModel
-        .converter(input, priceModel.priceReal, priceModel.priceDollar)
+        .converter(input, priceModel.priceDollar, priceModel.priceReal)
         .toStringAsFixed(2);
     euroController.text = priceModel
         .converter(input, priceModel.priceEuro, priceModel.priceDollar)
@@ -38,7 +38,7 @@ class PriceController {
 
   euroToRealAndDollar(input) {
     realController.text = priceModel
-        .converter(input, priceModel.priceReal, priceModel.priceEuro)
+        .converter(input, priceModel.priceEuro, priceModel.priceReal)
         .toStringAsFixed(2);
     dollarController.text = priceModel
         .converter(input, priceModel.priceDollar, priceModel.priceEuro)

@@ -6,6 +6,7 @@ class CPF {
   CPF(String this.cpf);
 
   List<int> _cpfInt = [];
+  String _cpfClean = '';
 
   bool validateCpf() {
     if (inputIsValid()) {
@@ -21,9 +22,7 @@ class CPF {
   }
 
   List<int> _fromStringToListOfInt() {
-    String cleanCpfOne = cpf.replaceFirst('.', "");
-    String cleanCpfTwo = cleanCpfOne.replaceFirst('.', "");
-    List<String> cpfString = cleanCpfTwo.split("");
+    List<String> cpfString = _cpfClean.split("");
     cpfString.forEach((element) {
       _cpfInt.add(int.parse(element));
     });
@@ -57,15 +56,22 @@ class CPF {
   }
 
   bool inputIsValid() {
-    if (cpf.length != 11) {
+    clearInput();
+    if (_cpfClean.length != 11) {
       return false;
     } else {
       try {
-        int.parse(cpf);
+        int.parse(_cpfClean);
         return true;
       } catch (e) {
+        print(e);
         return false;
       }
     }
+  }
+
+  void clearInput() {
+    String aux = cpf.replaceAll(".", "");
+    _cpfClean = aux.replaceAll("-", "");
   }
 }
