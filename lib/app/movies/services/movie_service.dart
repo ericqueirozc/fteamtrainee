@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:varios_apps/app/movies/models/movie_model.dart';
+import 'package:http/http.dart' as http;
 
 class MovieService {
   Future<String> getMoviesFromLocal() async {
@@ -7,6 +7,9 @@ class MovieService {
   }
 
   Future<String> getMoviesFromAPI() async {
-    return rootBundle.loadString('assets/movies.json');
+    var url = Uri.parse(
+        "https://my-json-server.typicode.com/ericqueirozc/fteamtraineeapi/movies");
+    var response = await http.get(url);
+    return response.body;
   }
 }

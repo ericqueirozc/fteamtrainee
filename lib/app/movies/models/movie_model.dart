@@ -9,7 +9,7 @@ class MovieModel {
   MovieModel(this.name, this.age);
 
   static Future<List<MovieModel>> fromJsonToList(MovieService service) async {
-    String _moviesString = await service.getMoviesFromLocal();
+    String _moviesString = await service.getMoviesFromAPI();
     List _moviesList = jsonDecode(_moviesString);
 
     List<MovieModel> _movies = _moviesList
