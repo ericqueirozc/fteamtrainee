@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:varios_apps/app/cpf/models/cpf_model.dart';
 
 class CpfController extends ChangeNotifier {
-  CpfController._();
-  static CpfController instance = CpfController._();
-
   //Properties
   TextEditingController cpfController = TextEditingController();
   bool isTextActive = false;

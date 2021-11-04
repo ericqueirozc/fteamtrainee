@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:varios_apps/app/conversor_de_moeda/models/price_model.dart';
 
 class PriceController {
-  PriceController._();
-  static PriceController instance = PriceController._();
+  PriceController();
 
   //Properties
   TextEditingController dollarController = TextEditingController();

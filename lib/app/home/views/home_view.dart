@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:varios_apps/app/home/views/components/app_card_component.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -17,38 +18,10 @@ class HomeView extends StatelessWidget {
               height: MediaQuery.of(context).size.height * .87,
               child: ListView(
                 children: [
-                  Card(
-                    child: ListTile(
-                      title: Text("IMC"),
-                      onTap: () {
-                        Navigator.pushNamed(context, '/imc');
-                      },
-                    ),
-                  ),
-                  Card(
-                    child: ListTile(
-                      title: Text("Conversor de Moeda"),
-                      onTap: () {
-                        Navigator.pushNamed(context, '/price');
-                      },
-                    ),
-                  ),
-                  Card(
-                    child: ListTile(
-                      title: Text("Validador de CPF"),
-                      onTap: () {
-                        Navigator.pushNamed(context, '/cpf');
-                      },
-                    ),
-                  ),
-                  Card(
-                    child: ListTile(
-                      title: Text("Filmes"),
-                      onTap: () {
-                        Navigator.pushNamed(context, '/movies');
-                      },
-                    ),
-                  )
+                  AppCard(title: "IMC", route: '/imc'),
+                  AppCard(title: "Conversor de Moeda", route: '/price'),
+                  AppCard(title: "Valido de CPF", route: '/cpf'),
+                  AppCard(title: "Filmes", route: '/movies')
                 ],
               ),
             )
