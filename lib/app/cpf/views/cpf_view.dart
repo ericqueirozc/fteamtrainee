@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 import 'package:provider/src/provider.dart';
 import 'package:varios_apps/app/cpf/controllers/cpf_controller.dart';
 import 'package:varios_apps/app/cpf/views/components/cpf_text_field_component.dart';
 import 'package:varios_apps/app/cpf/views/components/result_message_cpf_component.dart';
 import 'package:varios_apps/app/cpf/views/components/validate_cpf_buttom_component.dart';
 import 'package:varios_apps/app/cpf/views/components/warning_messages_cpf_component.dart';
-
-import 'components/activable_text_component.dart';
-import 'text_formatter/cpf_formatter.dart';
 
 class CpfView extends StatefulWidget {
   const CpfView({Key? key}) : super(key: key);
