@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:varios_apps/app/movies/models/movie_model.dart';
-import 'package:varios_apps/app/movies/services/movie_service.dart';
+import 'package:varios_apps/app/movies/services/movie_service_local.dart';
 
 class MovieServiceMock extends Mock implements MovieService {
   @override
