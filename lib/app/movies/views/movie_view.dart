@@ -19,7 +19,12 @@ class _MoviesViewState extends State<MoviesView> {
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [MovieList(), MovieButton()],
+        children: [
+          Expanded(
+            child: MovieList(),
+          ),
+          MovieButton()
+        ],
       ),
     );
   }

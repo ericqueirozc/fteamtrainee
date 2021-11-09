@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:varios_apps/app/home/views/components/app_card_component.dart';
-import 'package:varios_apps/app/theme_controller/theme_controller.dart';
+import 'package:varios_apps/app/theme/theme_controller.dart';
 import 'package:provider/provider.dart';
 
 class HomeView extends StatelessWidget {
