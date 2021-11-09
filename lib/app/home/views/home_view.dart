@@ -1,14 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:varios_apps/app/home/views/components/app_card_component.dart';
+import 'package:varios_apps/app/theme_controller/theme_controller.dart';
+import 'package:provider/provider.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({Key? key}) : super(key: key);
+  HomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    var themeController = context.read<ThemeController>();
     return Scaffold(
       appBar: AppBar(
         title: Text("Meus APP's"),
+        actions: [
+          Switch(
+              value: themeController.isDark,
+              onChanged: (value) {
+                themeController.setBrightness(value);
+              })
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
