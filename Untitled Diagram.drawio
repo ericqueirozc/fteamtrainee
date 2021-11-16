@@ -1,1 +1,188 @@
-<mxfile host="app.diagrams.net" modified="2021-11-16T01:36:36.015Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" version="15.7.4" etag="gQA-2gp1xEwNhhtVq-k3" type="github"><diagram id="xMwHwqfwHg_rDuLuOGQM">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-11-16T03:22:08.499Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36" etag="84v5IHzkWX0ptBvmn9CN" version="15.7.4" type="github">
+  <diagram id="xMwHwqfwHg_rDuLuOGQM" name="Page-1">
+    <mxGraphModel dx="981" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="143" width="720" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-3" value="Modulos" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="415" y="163" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-4" value="Estrutura mono-repo" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="385" y="83" width="122.5" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-6" value="Core" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="213" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-7" value="Design System" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="294" y="213" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-8" value="Auth" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="213" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-9" value="Imports" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="213" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-11" value="Splash" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="385" y="303" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-12" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="720" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-13" value="Core" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-14" value="Arquitetura" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="414" y="450" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-16" value="Imports" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="YGfVw-dZiz8iRk-bcqQF-17" target="YGfVw-dZiz8iRk-bcqQF-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-17" value="Auth" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-18" value="Design System" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="YGfVw-dZiz8iRk-bcqQF-19" target="YGfVw-dZiz8iRk-bcqQF-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-19" value="Splash" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="475" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-20" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="800" width="720" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-21" value="Core" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="410" y="820" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-22" value="Services" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="870" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-23" value="Components" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="870" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-24" value="Utils" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="870" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-25" value="Helpers" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="870" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-26" value="Entities" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-27" value="Contracts" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-28" value="Exceptions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-29" value="Value Objects" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="980" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-30" value="Constants" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1080" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-31" value="Enums" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1080" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-34" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1330" width="720" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-36" value="&lt;h1&gt;Services&lt;/h1&gt;&lt;p&gt;Nos services se encontram as regras de negócio e a comunicação com a camada de dados;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="95" y="1350" width="680" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-37" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1510" width="720" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-38" value="&lt;h1&gt;Components&lt;/h1&gt;&lt;p&gt;São os widgets que serão utilizados nas aplicações&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1530" width="685" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-39" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1710" width="720" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-40" value="&lt;h1&gt;Utils&lt;/h1&gt;&lt;p&gt;Classes ou funções pequenas que ajudam a resolver problemas comuns. Devem ser static, logo, não podem ser instanciadas.&lt;/p&gt;&lt;p&gt;Não possuem dependência e podem ser utilizadas em qualquer parte do código sem quebrar.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="94" y="1730" width="690" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-41" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1920" width="720" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-42" value="&lt;h1&gt;Helpers&lt;/h1&gt;&lt;p&gt;Classes que &quot;ajudam&quot; outras classes.&amp;nbsp; Normalmente servem apenas para uma classe e não faz sentido ser exportado para outro lugar, então, uma boa nomenclatura é &quot;nome_da_classe_helper.dart&quot;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="99" y="1940" width="690" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-43" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="2120" width="720" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-44" value="&lt;h1&gt;&lt;span&gt;Entities&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;span style=&quot;font-size: 12px ; font-weight: 400&quot;&gt;Possuem os atributos que descreve um objeto e também os códigos que estão relacionados ao tratamento dessa entidade.&lt;/span&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="99" y="2135" width="680" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-45" value="Errors" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="1080" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-46" value="Extensions" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1080" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-47" value="Stores" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-48" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="2320" width="720" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-49" value="&lt;h1&gt;Contracts&lt;/h1&gt;&lt;div&gt;Interfaces que determinam um tipo especifico de contrato e devem ser implementadas.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="99" y="2335" width="690" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-50" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="2520" width="720" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-51" value="&lt;h1&gt;Exceptions&lt;/h1&gt;&lt;div&gt;Onde escrevemos nossas exceptions personalizadas para cada caso e facilitamos o debug&amp;nbsp;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="99" y="2535" width="650" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-52" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="2720" width="720" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-53" value="&lt;h1&gt;Value Object&lt;/h1&gt;&lt;div&gt;&lt;font color=&quot;#111111&quot; face=&quot;Helvetica Neue, Helvetica, Arial, sans-serif&quot;&gt;&lt;span style=&quot;background-color: rgb(253 , 253 , 253)&quot;&gt;É um objeto que representa um valor. Utilizado para garantir que o valor está sendo utilizado da forma correta. Usar ao invés de usar um valor primitivo. ex: se for usar distancia em algum codigo, não usar int ou double, mas fazer um value object Distance com methods fromMetters e fromKillomtters por exemplo.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="99" y="2735" width="690" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-54" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="2920" width="720" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-55" value="&lt;h1&gt;Constants&lt;/h1&gt;&lt;p&gt;Valores que necessitam ser disponibilizado globalmente para ser utilizado (provavelmente várias vezes) em nas aplicações.&lt;/p&gt;&lt;p&gt;ex: endpoints&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="100" y="2935" width="670" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-56" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="3120" width="720" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-57" value="&lt;h1&gt;Enum&lt;/h1&gt;&lt;p&gt;Um valor que tem seu valor fixo, parecido com as variaveis com a keyword final, porém, possui algumas facilidades.&lt;br&gt;&lt;/p&gt;&lt;p&gt;enum dia {segunda,terca,quarta,quinta,sexta}.&lt;br&gt;dia hoje = dia.segunda;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="100" y="3135" width="690" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-58" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="3320" width="720" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-59" value="&lt;h1&gt;Extension&lt;/h1&gt;&lt;p&gt;métodos que complementam uma library que estejamos utilizando.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="95" y="3340" width="685" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-60" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="3520" width="720" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-61" value="&lt;h1&gt;Stores&lt;/h1&gt;&lt;div&gt;Classes que tratam os estados da aplicação&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="94" y="3540" width="316" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-62" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="3720" width="720" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="YGfVw-dZiz8iRk-bcqQF-63" value="&lt;h1&gt;Erros&lt;/h1&gt;&lt;p&gt;Erros costumizados que podem ser disparados em determinadas situações para ajudar no debug.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="99" y="3740" width="681" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
